@@ -8,9 +8,12 @@ def main():
     print("Welcome to the Dice Simulator!")
 
     while True:
-        input("Press Enter to roll the die. Press 'q' to quit.")
+        values = input("Press Enter to roll the die. Press 'q' to quit.")
         
         # Get a random number to simulate rolling a die
+        if values == 'q':
+            print("plx try again later")
+            break
         result = roll_dice()
 
         print(f"You rolled: {result}")

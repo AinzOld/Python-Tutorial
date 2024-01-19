@@ -1,26 +1,9 @@
-import random
+def print_star_triangle(rows):
+    for i in range(1, rows + 1):
+        print('* ' * i)
 
-def roll_dice():
-    """Simulate rolling a six-sided die."""
-    return random.randint(1, 6)
+# Set the number of rows for the star triangle
+num_rows = int(input("Enter the number of rows for the star triangle: "))
 
-def main():
-    print("Welcome to the Dice Simulator!")
-
-    while True:
-        values = input("Press Enter to roll the die. Press 'q' to quit.")
-        
-        # Get a random number to simulate rolling a die
-        if values == 'q':
-            print("plx try again later")
-            break
-        result = roll_dice()
-
-        print(f"You rolled: {result}")
-
-        if input("Roll again? (y/n): ").lower() != 'y':
-            print("Thanks for using the Dice Simulator. Goodbye!")
-            break
-
-if __name__ == "__main__":
-    main()
+# Call the function to print the star triangle
+print_star_triangle(num_rows)
